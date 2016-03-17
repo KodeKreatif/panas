@@ -15,6 +15,7 @@ function upload (gfs, gfsOpt, part, cb) {
       cb();
     })
   }
+  delete(gfsOpt.replace);
   gfs.remove({filename:part.filename}, function(err) {
     if (err) {
       return cb(err);
